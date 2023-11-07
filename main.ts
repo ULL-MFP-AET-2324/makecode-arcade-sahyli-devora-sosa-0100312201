@@ -1,6 +1,6 @@
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-    Comida.x = randint(0, scene.screenWidth())
-    Comida.x = randint(0, scene.screenHeight())
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    Comida.x = randint(8, scene.screenWidth())
+    Comida.y = randint(8, scene.screenHeight())
 })
 let Comida: Sprite = null
 scene.setBackgroundColor(2)
