@@ -1,10 +1,14 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     Comida.x = randint(8, scene.screenWidth())
     Comida.y = randint(8, scene.screenHeight())
+    info.changeScoreBy(1)
+    info.startCountdown(5)
+    Arbol.setScale(1, ScaleAnchor.Middle)
 })
 let Comida: Sprite = null
+let Arbol: Sprite = null
 scene.setBackgroundColor(2)
-let Arbol = sprites.create(img`
+Arbol = sprites.create(img`
     .....79....797....97..7.....77..
     ..9.99999.977779..799.7..7797...
     ..93377.969747.766777766779e777.
