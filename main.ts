@@ -1,4 +1,4 @@
-scene.setBackgroundColor(2)
+scene.setBackgroundColor(9)
 let Pato = sprites.create(img`
     . . . . . . . . . . b 5 b . . . 
     . . . . . . . . . b 5 b . . . . 
