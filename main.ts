@@ -1,4 +1,3 @@
-let Arbol: Sprite = null
 scene.setBackgroundColor(2)
 let Pato = sprites.create(img`
     . . . . . . . . . . b 5 b . . . 
@@ -18,7 +17,7 @@ let Pato = sprites.create(img`
     . . . . c c d d d 5 5 5 b b . . 
     . . . . . . c c c c c b b . . . 
     `, SpriteKind.Player)
-controller.moveSprite(Arbol)
+controller.moveSprite(Pato)
 let Comida = sprites.create(img`
     .............beebbbb............
     ............eebbbb4bb...........
