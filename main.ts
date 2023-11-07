@@ -1,60 +1,55 @@
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    hotdog.setPosition(randint(0, 160), randint(0, 120))
-    info.startCountdown(10)
-})
-let hotdog: Sprite = null
-scene.setBackgroundColor(10)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . 3 3 3 3 . . . . . . 
-    . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
-    . . 3 3 3 3 f f f f 3 3 3 3 . . 
-    . . 3 3 3 3 f f f f 3 3 3 3 . . 
-    . . 3 3 3 3 f f f f 3 3 3 3 . . 
-    . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
-    . . . 3 3 3 . . . . 3 3 3 . . . 
-    . . . 3 3 3 . . . . 3 3 3 . . . 
-    . . . 3 3 3 . . . . 3 3 3 . . . 
-    . . . . . . 3 3 3 3 . . . . . . 
-    . . . . . . 3 3 3 3 . . . . . . 
-    . . . . . . 3 3 3 3 . . . . . . 
-    . . . . . . . . . . . . . . . . 
+let Arbol: Sprite = null
+scene.setBackgroundColor(2)
+let Pato = sprites.create(img`
+    . . . . . . . . . . b 5 b . . . 
+    . . . . . . . . . b 5 b . . . . 
+    . . . . . . b b b b b b . . . . 
+    . . . . . b b 5 5 5 5 5 b . . . 
+    . . . . b b 5 d 1 f 5 d 4 c . . 
+    . . . . b 5 5 1 f f d d 4 4 4 b 
+    . . . . b 5 5 d f b 4 4 4 4 b . 
+    . . . b d 5 5 5 5 4 4 4 4 b . . 
+    . b b d d d 5 5 5 5 5 5 5 b . . 
+    b d d d b b b 5 5 5 5 5 5 5 b . 
+    c d d b 5 5 d c 5 5 5 5 5 5 b . 
+    c b b d 5 d c d 5 5 5 5 5 5 b . 
+    c b 5 5 b c d d 5 5 5 5 5 5 b . 
+    b b c c c d d d 5 5 5 5 5 d b . 
+    . . . . c c d d d 5 5 5 b b . . 
+    . . . . . . c c c c c b b . . . 
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-hotdog = sprites.create(img`
-    ..............bbbbbbb...........
-    ...........bb66663333baa........
-    .........bb3367776333663aa......
-    ........b33333888333389633aa....
-    .......b3333333333333389633aa...
-    ......b34443333333333338633bae..
-    .....b3455433333333334443333ae..
-    ....b33322333dddd3333455233daee.
-    ...b3d333333dd3bbbb33322333dabe.
-    ..b3d333333d3bb33bb33333333da4e.
-    ..bd33333333b33aab3333333223a4ee
-    .b3d3663333b33aab33366332442b4ee
-    .bd3b983333a3aa3333387633ee3b4ee
-    .bd6983333baaa333333387633bb4bee
-    b3d6833333bba333333333863ba44ebe
-    bdd3333333bb3333333333333a44bebe
-    add666633333322333366333ba44bbbe
-    ad67776333332442336983d3a444b4e.
-    add888b333333ee3369833d3a44b44e.
-    add333333333333336833d3a444b4e..
-    a3dd3333344433333dddd3a444b44e..
-    ab33ddd325543333dd33aa444b44e...
-    .eabb3dd32233333baaa4444b44e....
-    .ebabb3d333d33baa444443b44e.....
-    ..ebaab3ddd3aaa4444433b44e......
-    ..eebbaab33a44444333b444e.......
-    ...eeebbaab444b333b4444e........
-    ....ebeeebbbbbbbb4444ee.........
-    .....eebbbb44444444ee...........
-    .......eeebbb444eee.............
-    ..........eeeeee................
-    ................................
+controller.moveSprite(Arbol)
+let Comida = sprites.create(img`
+    .............beebbbb............
+    ............eebbbb4bb...........
+    ............eb344bb4bb..........
+    ............e44334bb4bb.........
+    ............eb433344b4be........
+    ............4eb43344444be.......
+    ...........bd4eb43333344bb......
+    ..........b455d4443333444bb.....
+    ..........4d5555d444333444bb....
+    .........4555555dd4b4443444be...
+    ........bd5555d555d4bb444444ee..
+    ........b55ddd665555bb4b44444ee.
+    .......bd5555677655554ebb44444eb
+    .......43222558855555d4eeb44b4ee
+    ......b422332ddd555222d4eebbb4be
+    ......be22232ed55522332db4ebbbbe
+    .....bde22222e555e22232edd4bbbbe
+    .....b52e222e3555e22222eddd4ebee
+    ....bd552eee355552e222e355544eee
+    ....665dd5555555552eee355dd4deee
+    ...6776555555555555555551554d4ee
+    ...4885222555dddd6655551544d4eee
+    ..b45522332555dd677611d444ddeee.
+    ..4d5222232e55555881d44ddd4eee..
+    .bdd5e22222e555115114d54d4ee....
+    .b55d2e222e351144d1d55eeee......
+    bd5ddd2eee3d444555dd4e..........
+    b555115dddd55d544eede...........
+    4511d444d5544ee...4de...........
+    41d4555d4ee........44...........
+    41554eede.......................
+    44ee...4e.......................
     `, SpriteKind.Food)
