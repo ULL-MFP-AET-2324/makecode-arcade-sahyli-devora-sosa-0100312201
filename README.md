@@ -1,5 +1,12 @@
 [![Work in MakeCode](https://classroom.github.com/assets/work-in-make-code-46eb539bcdc54ff4682c9f84a178d570a59fd821693cb33b02a3e5220eed4e48.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12777630&assignment_repo_type=AssignmentRepo)
-#Ratones y globos ![Build status badge]()
+
+> Open this page at [https://sahyli.github.io/ratones-y-globos/](https://sahyli.github.io/ratones-y-globos/)
+> 
+> Organizacion:(https://github.com/Ull-mfp-2324-alu0100312201)
+> 
+> Classroom:(https://classroom.github.com/classrooms/149710216-ull-mfp-aet-2324-alu0100312201)
+> 
+> Tarea ratones y globos: (https://github.com/Ull-mfp-2324-alu0100312201/ratones-y-globos)
 
 ## Assignment
 Update the variable name so that it matches the food sprite image
